@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    	    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Uzduotis</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by *.</p>
+        <h2>Contact information</h2>
+        <div class="formfield">            
+            <fieldset>
+                <legend>Title:</legend>
+                <div>
+                    <input type="radio" id="mister" name="title" value="mister">
+                    <label for="mister">Mister</label>
+                </div>
+                <div>
+                    <input type="radio" id="miss1" name="title" value="miss">
+                    <label for="miss1">Miss</label>
+                </div>
+            </fieldset>
+        </div>            
+        <div>
+            <label for="name">Name:* </label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">E-mail:* </label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>            
+            <label for="passw">Password:* </label>
+            <input type="password" id="passw" name="passw" required>
+        </div>
+        <h2>Payment information</h2>
+        <div class="type">            
+            <label for="cardtyp">Card type
+                <select id="cardtyp" value="none" required>
+                    <option value="none"></option>
+                    <option value="visa">Visa</option>
+                    <option value="master">Mastercard</option>
+                </select>                
+            </label>
+        </div>
+        <div>            
+            <label for="cardnum">Card number:*</label>
+            <input class="cardnum"  type="number" id="cardnum" name="cardnum" min="1000000000000000" max="9999999999999999" value="0" required>
+            <!-- <input class="cardnum"  type="numchar" id="cardnum" name="cardnum" minlength="16" maxlength="16" required> -->
+        </div>
+        <div>            
+            <label for="expir">Expiration date:*</label>
+            <input type="month" name="expir" id="expir" value="2022-01" min="2022-05"  required>          
+            <!-- <input type="text" id="expir" placeholder="mm/yy"> -->
+        </div>
+        <div class="center">            
+            <!-- <input class="but" type="submit" value="Validate the payment"> -->
+            <button type="submit" class="but">Validate the payment</button>
+        </div>
+    </form>
+</body>
+</html>
